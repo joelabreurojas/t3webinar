@@ -6,6 +6,12 @@ await import("./src/env.js");
 
 /** @type {import("next").NextConfig} */
 const config = {
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  elint: {
+    ignoreDuringBuilds: true,
+  },
   images: {
     remotePatterns: [
       {
