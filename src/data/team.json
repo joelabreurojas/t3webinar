@@ -1,0 +1,64 @@
+{
+  "team": [
+    {
+      "name": "Joel Abreu",
+      "image": "https://avatars.githubusercontent.com/u/103466145?s=96&v=4",
+      "cv": "https://j4breu.github.io/resume"
+    },
+    {
+      "name": "Helvis Basantes",
+      "image": "https://raikanwolf.github.io/img/yo.jpg",
+      "cv": "https://raikanwolf.github.io"
+    },
+    {
+      "name": "Wuilkys Becerra",
+      "image": "https://raw.githubusercontent.com/wuilkysb/profile-dev/main/images/user-3.jpg",
+      "cv": "https://wuilkysbecerra.pages.dev"
+    },
+    {
+      "name": "Carlos Brito",
+      "image": "https://avatars.githubusercontent.com/u/90299331?v=4",
+      "cv": "https://github.com/Cbrito475"
+    },
+    {
+      "name": "Luis Brito",
+      "image": "https://avatars.githubusercontent.com/u/100682725?v=4",
+      "cv": "https://supramostaza.github.io/Practica_4/"
+    },
+    {
+      "name": "Alejandro Caraballo",
+      "image": "https://avatars.githubusercontent.com/u/140138909?v=4",
+      "cv": "https://alejandrocaraballo.github.io/Portafolio-AC/#habilidades"
+    },
+    {
+      "name": "Dionner Figueras",
+      "image": "https://avatars.githubusercontent.com/u/136843742?v=4",
+      "cv": "https://github.com/DionnerFigueras"
+    },
+    {
+      "name": "Yesenia Larenas",
+      "image": "https://avatars.githubusercontent.com/u/126731678?v=4",
+      "cv": "https://github.com/ohsolus"
+    },
+    {
+      "name": "Angel Padrino",
+      "image": "https://avatars.githubusercontent.com/u/74786456?v=4",
+      "cv": "https://github.com/plumreiss"
+    },
+    {
+      "name": "Alvaro Resplandor",
+      "image": "https://avatars.githubusercontent.com/u/89155155?v=4",
+      "cv": "https://alvaro-resplandor.vercel.app"
+    },
+    {
+      "name": "Daniel Rodríguez",
+      "image": "https://avatars.githubusercontent.com/u/104751483?v=4",
+      "cv": "https://dancrewzus.github.io/"
+    },
+    {
+      "name": "Jose Yepez",
+      "image": "https://avatars.githubusercontent.com/u/97323767?v=4",
+      "cv": "https://cvjey-github-net.vercel.app"
+    }
+  ]
+}
