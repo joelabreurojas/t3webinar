@@ -9,7 +9,7 @@ const config = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  elint: {
+  eslint: {
     ignoreDuringBuilds: true,
   },
   images: {
