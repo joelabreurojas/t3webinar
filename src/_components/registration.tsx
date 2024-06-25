@@ -2,29 +2,48 @@
 
 import { useState } from "react";
 
-const [name, setName] = useState<string>("");
-const [email, setEmail] = useState<string>("");
-const [company, setCompany] = useState<string>("");
-const [position, setPosition] = useState<string>("");
-
-const submitForm = async (e: React.SyntheticEvent<HTMLFormElement>) => {
-  e.preventDefault();
-
-  setName("");
-  setEmail("");
-  setCompany("");
-  setPosition("");
-
-  if (!name || !email || !company || !position) {
-    alert("Please fill in all fields");
-    return;
-  }
-
-  alert("Form submitted successfully");
-};
-
-
 export default function Registration() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    position: ""
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!formData.name || !formData.email || !formData.company || !formData.position) {
+      alert("Please fill in all fields");
+      return;
+    }
+
+    try {
+      const response = await fetch("/api/registration", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        console.error('Error:', error);
+        alert("Error submitting form");
+      }
+
+      alert("Form submitted successfully");
+
+    } catch (error) {
+      console.error('Error:', error);
+      alert("Error submitting form");
+    }
+  };
+
   return (
     <section id="register" className="bg-purple">
       <div className="mx-auto flex w-full max-w-xl flex-col items-center gap-16 px-8 py-24 text-white lg:max-w-7xl lg:flex-row lg:justify-center">
@@ -39,7 +58,7 @@ export default function Registration() {
           <p className="text-sm">A public room you are invited to join</p>
         </div>
         <form
-          onSubmit={submitForm}
+          onSubmit={handleSubmit}
           className="w-lg flex flex-col justify-center gap-8 rounded-lg bg-white py-8 text-center text-black lg:w-1/2"
         >
           <h3 className="font-title text-base font-semibold">Contact us</h3>
@@ -50,8 +69,8 @@ export default function Registration() {
                 type="text"
                 id="name"
                 name="name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                value={formData.name}
+                onChange={handleChange}
                 pattern="[A-Za-z ]+"
                 title="Name must contain only letters or spaces"
                 required
@@ -63,8 +82,8 @@ export default function Registration() {
                 type="email"
                 name="email"
                 id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value={formData.email}
+                onChange={handleChange}
                 required
               />
             </div>
@@ -74,8 +93,8 @@ export default function Registration() {
                 type="text"
                 name="company"
                 id="company"
-                value={company}
-                onChange={(e) => setCompany(e.target.value)}
+                value={formData.company}
+                onChange={handleChange}
                 required
               />
             </div>
@@ -85,8 +104,8 @@ export default function Registration() {
                 type="text"
                 name="position"
                 id="position"
-                value={position}
-                onChange={(e) => setPosition(e.target.value)}
+                value={formData.position}
+                onChange={handleChange}
                 required
               />
             </div>
