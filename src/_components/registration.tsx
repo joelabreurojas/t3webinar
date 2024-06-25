@@ -2,28 +2,29 @@
 
 import { useState } from "react";
 
-function Registration() {
-  const [name, setName] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  const [company, setCompany] = useState<string>("");
-  const [position, setPosition] = useState<string>("");
+const [name, setName] = useState<string>("");
+const [email, setEmail] = useState<string>("");
+const [company, setCompany] = useState<string>("");
+const [position, setPosition] = useState<string>("");
 
-  const submitForm = async (e: React.SyntheticEvent<HTMLFormElement>) => {
-    e.preventDefault();
+const submitForm = async (e: React.SyntheticEvent<HTMLFormElement>) => {
+  e.preventDefault();
 
-    setName("");
-    setEmail("");
-    setCompany("");
-    setPosition("");
+  setName("");
+  setEmail("");
+  setCompany("");
+  setPosition("");
 
-    if (!name || !email || !company || !position) {
-      alert("Please fill in all fields");
-      return;
-    }
+  if (!name || !email || !company || !position) {
+    alert("Please fill in all fields");
+    return;
+  }
 
-    alert("Form submitted successfully");
-  };
+  alert("Form submitted successfully");
+};
 
+
+export default function Registration() {
   return (
     <section id="register" className="bg-purple">
       <div className="mx-auto flex w-full max-w-xl flex-col items-center gap-16 px-8 py-24 text-white lg:max-w-7xl lg:flex-row lg:justify-center">
@@ -98,5 +99,3 @@ function Registration() {
     </section>
   );
 }
-
-export default Registration;

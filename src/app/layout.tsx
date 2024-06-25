@@ -1,8 +1,8 @@
 import "~/styles/globals.css";
 
-import TopNav from "~/components/TopNav";
-import Hero from "~/components/Hero";
-import Footer from "~/components/Footer";
+import TopNav from "~/_components/topnav";
+import Hero from "~/_components/hero";
+import Footer from "~/_components/footer";
 
 export const metadata = {
   title: "Tech Talent Hub Event | Webinar",

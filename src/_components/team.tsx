@@ -54,7 +54,7 @@ const TeamList = () => {
   );
 };
 
-function Team() {
+export default function Team() {
   return (
     <section id="team" className="bg-purple">
       <div className="mx-auto flex w-full max-w-xl flex-col items-center gap-16 px-8 py-24 text-white lg:max-w-7xl lg:flex-row lg:justify-center">
@@ -93,5 +93,3 @@ function Team() {
     </section>
   );
 }
-
-export default Team;

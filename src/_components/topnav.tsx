@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-function TopNav() {
+export default function TopNav() {
   return (
     <nav
       id="navbar"
@@ -28,5 +28,3 @@ function TopNav() {
     </nav>
   );
 }
-
-export default TopNav;

@@ -1,6 +1,6 @@
-import Team from "~/components/Team";
-import Video from "~/components/Video";
-import Registration from "~/components/Registration";
+import Team from "~/_components/team";
+import Video from "~/_components/video";
+import Registration from "~/_components/registration";
 
 export default function HomePage() {
   return (

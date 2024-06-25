@@ -1,4 +1,4 @@
-function Video() {
+export default function Video() {
   return (
     <section
       id="development"
@@ -19,5 +19,3 @@ function Video() {
     </section>
   );
 }
-
-export default Video;
