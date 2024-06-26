@@ -1,6 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { NextResponse } from "next/server";
+
+interface SendResponse {
+  error?: string;
+}
 
 export default function Registration() {
   const [formData, setFormData] = useState({
@@ -44,13 +49,16 @@ export default function Registration() {
     }
 
     try {
-      const response = await fetch("/api/registration", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response: NextResponse<SendResponse> = await fetch(
+        "/api/registration",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
         },
-        body: JSON.stringify(formData),
-      });
+      );
 
       if (!response.ok) {
         console.error("Error:", error);
