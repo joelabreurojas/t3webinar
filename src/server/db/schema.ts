@@ -18,17 +18,19 @@ import {
  */
 export const createTable = pgTableCreator((name) => `t3webinar_${name}`);
 
-export const posts = createTable(
-  "post",
+export const users = createTable(
+  "users",
   {
-    id: serial("id").primaryKey(),
-    name: varchar("name", { length: 256 }),
+    email: varchar("email").primaryKey(),
+    name: varchar("name", { length: 255 }),
+    company: varchar("company", { length: 255 }),
+    position: varchar("position", { length: 255 }),
     createdAt: timestamp("created_at", { withTimezone: true })
       .default(sql`CURRENT_TIMESTAMP`)
       .notNull(),
     updatedAt: timestamp("updatedAt", { withTimezone: true }),
   },
   (example) => ({
-    nameIndex: index("name_idx").on(example.name),
-  })
+    emailIndex: index("email_idx").on(example.email),
+  }),
 );
