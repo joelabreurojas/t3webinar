@@ -61,8 +61,9 @@ export default function Registration() {
       );
 
       if (!response.ok) {
-        console.error("Error:", error);
+        console.error("Error:", response.statusText);
         alert("Error submitting form");
+        return;
       }
 
       alert("Form submitted successfully");
