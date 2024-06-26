@@ -7,7 +7,7 @@ export default function Registration() {
     name: "",
     email: "",
     company: "",
-    position: ""
+    position: "",
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -17,8 +17,29 @@ export default function Registration() {
   const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!formData.name || !formData.email || !formData.company || !formData.position) {
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.company ||
+      !formData.position
+    ) {
       alert("Please fill in all fields");
+      return;
+    }
+
+    for (const [key, value] of Object.entries(formData)) {
+      if (!value) {
+        alert(`Please fill in ${key}`);
+        return;
+      }
+      if (value.length > 255) {
+        alert(`Please flex ${key} less than 255 char`);
+        return;
+      }
+    }
+
+    if (!/^[a-zA-Z\s]+$/.test(formData.name)) {
+      alert("Name only can contain letters and spaces");
       return;
     }
 
@@ -32,14 +53,13 @@ export default function Registration() {
       });
 
       if (!response.ok) {
-        console.error('Error:', error);
+        console.error("Error:", error);
         alert("Error submitting form");
       }
 
       alert("Form submitted successfully");
-
     } catch (error) {
-      console.error('Error:', error);
+      console.error("Error:", error);
       alert("Error submitting form");
     }
   };
@@ -71,8 +91,8 @@ export default function Registration() {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                pattern="[A-Za-z ]+"
-                title="Name must contain only letters or spaces"
+                pattern="^[A-Za-z\s]{1,255}$"
+                title="Name name must be less than 255 characters and only letters or spaces"
                 required
               />
             </div>
@@ -84,6 +104,8 @@ export default function Registration() {
                 id="email"
                 value={formData.email}
                 onChange={handleChange}
+                pattern={"{1,255}"}
+                title="Email name must be less than 255 characters"
                 required
               />
             </div>
@@ -95,6 +117,8 @@ export default function Registration() {
                 id="company"
                 value={formData.company}
                 onChange={handleChange}
+                pattern={"{1,255}"}
+                title="Company name must be less than 255 characters"
                 required
               />
             </div>
@@ -106,6 +130,8 @@ export default function Registration() {
                 id="position"
                 value={formData.position}
                 onChange={handleChange}
+                pattern={"{1,255}"}
+                title="Position name must be less than 255 characters"
                 required
               />
             </div>
