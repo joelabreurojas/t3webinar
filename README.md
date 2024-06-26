@@ -7,7 +7,7 @@
 - [x] Responsive design
 - [x] Set up a postgress database
 - [ ] Connect database to UI for registrations
-- [ ] Add email notifications support
+- [x] Add email notifications support
 - [ ] Implement a chatbot with flowise
 - [ ] Make tests
 - [ ] Documentation
