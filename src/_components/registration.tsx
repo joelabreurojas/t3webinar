@@ -22,6 +22,13 @@ export default function Registration() {
   const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    setFormData({
+      name: "",
+      email: "",
+      company: "",
+      position: "",
+    });
+
     if (
       !formData.name ||
       !formData.email ||
