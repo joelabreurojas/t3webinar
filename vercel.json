@@ -3,7 +3,7 @@
   "ignoreCommand": "pnpm dlx turbo-ignore",
   "crons": [
     {
-      "path": "/api/reminder",
+      "path": "/api/send/reminder",
       "schedule": "0 0 10 7 *"
     }
   ]
