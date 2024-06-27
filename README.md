@@ -6,7 +6,7 @@
 - [x] Deploy to vercel
 - [x] Responsive design
 - [x] Set up a postgress database
-- [ ] Connect database to UI for registrations
+- [x] Connect database to UI for registrations
 - [x] Add email notifications support
 - [ ] Implement a chatbot with flowise
 - [ ] Make tests
