@@ -5,7 +5,7 @@ export default function Footer() {
     <footer id="footer" className="bg-gray-50">
       <section className="mx-auto flex max-w-md flex-col items-center gap-12 px-8 py-24 text-center text-xs lg:flex lg:max-w-7xl lg:flex-row lg:justify-between lg:text-left">
         <article className="flex flex-col gap-4 text-center lg:gap-8 lg:text-left">
-          <p className="text-base font-bold">Tech Talent Hunt</p>
+          <p className="text-base font-bold">Tech Talent Hub</p>
           <p>Get ready for the future with us</p>
           <p>© Copyright 2024, All Rights Reserved</p>
         </article>
