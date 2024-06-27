@@ -6,8 +6,8 @@ export async function GET() {
   try {
     const users = await db.query.users.findMany();
 
-    if (!users) {
-      return new Response(JSON.stringify({ message: "No users found" }), {
+    if (!users.length) {
+      return new Response(JSON.stringify({ error: "No users found" }), {
         status: 404,
         headers: {
           "Content-Type": "application/json",
