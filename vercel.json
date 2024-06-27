@@ -1,6 +1,4 @@
 {
-  "buildCommand": "pnpm turbo build",
-  "ignoreCommand": "pnpm dlx turbo-ignore",
   "crons": [
     {
       "path": "/api/send/reminder",
