@@ -1,0 +1,10 @@
+{
+  "buildCommand": "pnpm turbo build",
+  "ignoreCommand": "pnpm dlx turbo-ignore",
+  "crons": [
+    {
+      "path": "/api/reminder",
+      "schedule": "0 6 10 7 3"
+    }
+  ]
+}

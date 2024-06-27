@@ -5,7 +5,7 @@ export async function POST(request) {
     const userData = await request.json();
     const firstName = userData.name.split(" ")[0];
     const messageData = {
-      title: "Tech Talent Hub - Access to Webinar",
+      title: "Tech Talent Hub - Reminder to Webinar",
       message: `
         <head>
           <link
@@ -43,12 +43,12 @@ export async function POST(request) {
                       font-size: 2.4em;
                       line-height: 1.3;
                       '
-                    >Hello, ${firstName}!</h1>
+                    >Hello again, ${firstName}!</h1>
                     <p style='font-size: 1.6em; line-height: 1.3'>
-                      Our meeting will be on July 10.
+                      Our event takes place today, don't miss it.
                     </p>
                     <p style='font-size: 1.6em; line-height: 1.3'>
-                      We are glad you are interested in joining us.
+                      We are waiting for you.
                     </p>
                     <hr>
                     <p><strong>

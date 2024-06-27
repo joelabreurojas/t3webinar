@@ -23,6 +23,9 @@ importers:
       next:
         specifier: ^14.2.1
         version: 14.2.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      node-cron:
+        specifier: ^3.0.3
+        version: 3.0.3
       nodemailer:
         specifier: ^6.9.14
         version: 6.9.14
@@ -1657,6 +1660,10 @@ packages:
       sass:
         optional: true
 
+  node-cron@3.0.3:
+    resolution: {integrity: sha512-dOal67//nohNgYWb+nWmg5dkFdIwDm8EpeGYMekPMrngV3637lqnX0lbUcCtgibHTz6SEz7DAIjKvKDFYCnO1A==}
+    engines: {node: '>=6.0.0'}
+
   node-gyp-build@4.8.1:
     resolution: {integrity: sha512-OSs33Z9yWr148JZcbZd5WiAXhh/n9z8TxQcdMhIOlpN9AhWpLfvVFO73+m77bBABQMaY9XSvIa+qk0jlI7Gcaw==}
     hasBin: true
@@ -2215,6 +2222,10 @@ packages:
 
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
+
+  uuid@8.3.2:
+    resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
+    hasBin: true
 
   which-boxed-primitive@1.0.2:
     resolution: {integrity: sha512-bwZdv0AKLpplFY2KZRX6TvyuN7ojjr7lwkg6ml0roIy9YeuSr7JS372qlNW18UQYzgYK9ziGcerWqZOmEn9VNg==}
@@ -3961,6 +3972,10 @@ snapshots:
       - '@babel/core'
       - babel-plugin-macros
 
+  node-cron@3.0.3:
+    dependencies:
+      uuid: 8.3.2
+
   node-gyp-build@4.8.1: {}
 
   nodemailer@6.9.14: {}
@@ -4504,6 +4519,8 @@ snapshots:
       node-gyp-build: 4.8.1
 
   util-deprecate@1.0.2: {}
+
+  uuid@8.3.2: {}
 
   which-boxed-primitive@1.0.2:
     dependencies:
